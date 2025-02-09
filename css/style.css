@@ -351,7 +351,7 @@ li{
 
     .last-child{
         background: #BFA55E;
-        padding: 51px 60px;
+        padding: 51px 60px 51px 50px;
         line-height: 100px;
         text-transform: uppercase;
         height: 80%;
