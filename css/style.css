@@ -1,18 +1,3 @@
-/*
-Theme Name: Creative
-Theme URI: http://themewagon.com/demo/Creative/
-Author: ThemeWagon
-Author URI: http://themewagon.com/
-Description: One page template
-Version: 1.0
-License: GNU General Public License v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags:
-Text Domain: creative
-*/
-
-/* Default */
-
 .white{
     color: white;
 }
@@ -1301,7 +1286,7 @@ h1 {
     font-size: 1.6em;
 }
 h2 {
-    font-size: 4.1em;
+    font-size: 3.1em;
     margin-bottom: .65em;
 }
 .services {
