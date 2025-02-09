@@ -563,6 +563,7 @@ button {
     background-color: #fcfbf9;
     border: 4px double #d5ccb3;
     color: #c4ac6c;
+margin: 10px;
 }
 .btn-border:hover, .btn-border:focus {
     color: #1c1c1c;
