@@ -1,3 +1,10 @@
+/*!
+ * Bootstrap v3.2.0 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 
 article,
 aside,
@@ -3674,7 +3681,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
 .container-fluid > .navbar-collapse {
-
+ /* margin-right: -15px;
+  margin-left: -15px;*/
 }
 @media (min-width: 768px) {
   .container > .navbar-header,
@@ -4578,9 +4586,10 @@ a.thumbnail.active {
 }
 .progress.active .progress-bar,
 .progress-bar.active {
+  /*
   -webkit-animation: progress-bar-stripes 2s linear infinite;
        -o-animation: progress-bar-stripes 2s linear infinite;
-          animation: progress-bar-stripes 2s linear infinite;
+          animation: progress-bar-stripes 2s linear infinite;*/
 }
 .progress-bar[aria-valuenow="1"],
 .progress-bar[aria-valuenow="2"] {
