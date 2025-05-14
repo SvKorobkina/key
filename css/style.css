@@ -511,7 +511,7 @@ button.office-place{
     height: 114px;
     color: white;
     background-color: #BFA55E;
-    padding: 0 78px;
+   /* padding: 0 78px;*/
 }
 .office-place {
     color: #c4ac6c;
@@ -2105,6 +2105,9 @@ h2 {
     .swiper-slide {
         width: 33.33%; /* Каждый слайд занимает треть ширины */
     }
+    .key{
+        display: none;
+    }
     /*
     .swiper-slide {
         height: 28em !important;
@@ -2126,6 +2129,7 @@ h2 {
         top: 28%;
         left: 0;
     }
+
 }
 
 
@@ -2134,7 +2138,9 @@ h2 {
         padding: 0 28px 0 0;
         font-size: 28px;
     }
-    
+    .lead-creative~h3 {
+        font-size: 45px;
+    }
 }
 
 
