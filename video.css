@@ -1,0 +1,71 @@
+h2 {
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Скрыть по умолчанию */
+    position: fixed; /* Открывается поверх всего */
+    z-index: 1000; /* Поверх других элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Прокрутка при необходимости */
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+    position: relative;
+    top: 0;
+    left: 56%;
+    transform: translate(-50%, -50%); /* Центрирование */
+    width: 80%; /* Ширина модального окна */
+    max-width: 800px; /* Максимальная ширина */
+}
+
+.close {
+    position: absolute;
+    top: -3px;
+    right: 9%;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 10;
+}
+@media (max-width: 851px){
+    .close {
+        right: 9%;
+    }
+    video{
+        width:47%;
+    }
+    .modal-content {
+        top: 78px;
+        left: 6%;
+        transform: 0;
+        width: 80%;
+    }
+    .close {
+        position: absolute;
+        top: -3px;
+        right: 55%;
+        color: white;
+        font-size: 50px;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+@media (max-width: 500px) {
+    .modal-content {
+
+        left: 25%;
+
+    }
+}
+@media (max-width: 390px) {
+    .modal-content {
+
+        left: 26%;
+
+    }
+}
