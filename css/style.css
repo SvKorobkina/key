@@ -401,6 +401,7 @@ padding: 15px;
 }
 .col-md-4{
     display: flex !important;
+    justify-content: space-evenly;
 }
 #intro-text{
     margin-top: 20px !important;
