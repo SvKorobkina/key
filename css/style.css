@@ -2176,6 +2176,7 @@ h2 {
         width: 100%;
         top: 28%;
         left: 0;
+        height: 100vh;
     }
     .lead-creative-banner {
         font-size: 17px;
