@@ -160,6 +160,7 @@ abbr, abbr[title] {
 a {
     color: #1c1c1c;
     text-decoration: none;
+    cursor: pointer;
 }
 strong {
     font-weight: normal;
@@ -258,7 +259,7 @@ body {
 }
 
 
-    /*! normalize.css v2.1.3 | MIT License | git.io/normalize */article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
 .active{
@@ -388,6 +389,18 @@ li{
     border: 6px solid #BFA55E;
     padding: 5px;*/
     transition: 0.4s;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+}
+
+.social a{
+padding: 15px;
+}
+.col-md-4{
+    display: flex !important;
 }
 #intro-text{
     margin-top: 20px !important;
@@ -1666,14 +1679,19 @@ h2 {
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
+    justify-content: center;
 }
 .imgcaption div{
     width: 162px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin: 30px 0;
 }
+.imgcaption div a{
+    margin: 0 15px;
+}
+
 
 #members .name {
     display: block;
@@ -1702,6 +1720,7 @@ h2 {
 
 #our-service h3 {
     font-size: 2.5em;
+    font-weight: 600;
     margin-top: 0;
     margin-bottom: 1em;
     color: #252525;
@@ -1916,6 +1935,11 @@ h2 {
     align-items: center;
 }
 
+.modal-info{
+    top: 5% !important;
+    z-index: 5000;
+    overflow-y: scroll;
+}
 .brendMoney{
     top: 0 !important;
 }
@@ -2115,10 +2139,33 @@ h2 {
 }
 
 @media (max-width: 662px) {
+    .lead-creative {
+        font-size: 45px;
+    }
+    .container h2 {
+        font-style: italic;
+        font-weight: 500;
+        font-size: 29px;
+    }
     .brand {
         margin: 43px 10px !important;
       }
+.brand img{
+    width: 100px !important;
+}
+.lead-creative~p {
+    font-size: 23px;
+}
+.navbar-fixed-top {
+    position: absolute !important;
+    height: 126px !important;
+}
 
+.lead-creative~h3 {
+    font-size: 33px;
+    margin-top: 55px;
+    margin-bottom: 20px;
+}
       .last-child {
         padding: 39px 10px 39px 0;
         font-size: 35px;
@@ -2129,27 +2176,37 @@ h2 {
         top: 28%;
         left: 0;
     }
-
+    .lead-creative-banner {
+        font-size: 17px;
+        word-spacing: 4px;
+    letter-spacing: .8px;
+    line-height: 35px;
+    }
+    .function-text {
+        font-size: 15px;
+        letter-spacing: 1px;
+        word-spacing: 3px;
+        line-height: 29px;
+    }
+    .intro .container {
+        margin-top: 169px;
+    }
 }
 
 
 @media screen and (max-width: 430px) {
     .last-child {
         padding: 0 28px 0 0;
-        font-size: 28px;
     }
-    .lead-creative~h3 {
-        font-size: 45px;
-    }
+
 }
 
 
 @media (max-width: 400px){
-    .top-margin{
-      margin-top: 178px !important;
-  }
   .last-child {
     padding: 0 27px 0 0;
-    font-size: 20px;
+}
+.lead-creative~p {
+    font-size: 16px;
 }
   }
