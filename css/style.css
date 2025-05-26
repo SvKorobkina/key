@@ -36,7 +36,7 @@ b, strong {
 }
 
 .section {
-    padding: 6em 0;
+    padding: 2em 0;
     background-color: #252525;
 }
 
@@ -527,6 +527,11 @@ button.office-place{
     background-color: #BFA55E;
    /* padding: 0 78px;*/
 }
+
+#office-place{
+border-radius: 18px;
+}
+
 .office-place {
     color: #c4ac6c;
     font-size: 30px;
@@ -1264,7 +1269,7 @@ body {
     margin: 2%;
     min-width: 284px;
     max-width: 362px;
-    height: 750px;
+    height: 707px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1279,7 +1284,7 @@ body {
     margin: 2%;
     min-width: 292px;
     max-width: 350px;
-    height: 750px;
+    height: 707px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1290,7 +1295,7 @@ body {
 }
 
 .price {
-	margin: 24px 0 0;
+	margin-top: 10px;
 	font-size: 36px;
 	font-weight: 700;
 }
@@ -1301,14 +1306,15 @@ body {
 }
 
 .price-del{
-    margin-top: -17px;
+    margin-top: -43px;
+    margin-bottom: -2px;
     font-size: 33px;
     font-weight: 200;
     color: #636363;
 }
 
 .price__info{
-    height: 300px;
+    height: 186px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1747,7 +1753,7 @@ h2 {
     background-color: #ffffff;
     width: 100%;
     overflow-x: scroll;
-    padding: 20px;
+    padding: 8px;
 }
 #CTA-1 {
     background: url(../images/bg3.jpg);  
@@ -2009,12 +2015,13 @@ h2 {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 2em;
-    padding: 2em;
-    border-radius: calc(var(--curve) * 1px) 0 0 0;    
-    background-color: var(--surface-color);
+    /* gap: 2em; */
+    padding: 1em;
+    border-radius: calc(var(--curve)* 1px) 0 0 0;
+    background-color: #fafafa;
     transform: translateY(-100%);
     transition: .2s ease-in-out;
+    flex-direction: column;
   }
   
   .card__arc {
@@ -2072,6 +2079,13 @@ h2 {
     overflow: hidden;
   }    
 
+  .card__button{
+    background-color: #c4ac6c;
+    width: 13em;
+    height: 3em;
+    border-radius: .5em;
+    color: white;
+  }
 @keyframes animate-background {
     0% {
         background-position: 0 50%;
@@ -2185,10 +2199,10 @@ h2 {
     line-height: 35px;
     }
     .function-text {
-        font-size: 15px;
-        letter-spacing: 1px;
-        word-spacing: 3px;
-        line-height: 29px;
+        font-size: 13px;
+        letter-spacing: 0px;
+        word-spacing: 0px;
+        line-height: 22px;
     }
     .intro .container {
         margin-top: 169px;
