@@ -412,7 +412,7 @@ padding: 15px;
     position: fixed;
 }
 .top-margin{
-    margin-top: 20px !important;
+    margin-top: -22px !important;
 }
 .top-text{
     font-weight: bold;
@@ -1972,6 +1972,9 @@ h2 {
 }
 
 /*карточки*/
+.portfolio{
+    margin-top: 7rem;
+}
 .cards {
     /*display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -2184,8 +2187,8 @@ h2 {
 }
 
 .lead-creative~h3 {
-    font-size: 33px;
-    margin-top: 55px;
+    font-size: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
       .last-child {
@@ -2200,10 +2203,10 @@ h2 {
         height: 100vh;
     }
     .lead-creative-banner {
-        font-size: 17px;
+        font-size: 15px;
         word-spacing: 4px;
-    letter-spacing: .8px;
-    line-height: 35px;
+        letter-spacing: .8px;
+        line-height: 15px;
     }
     .function-text {
         font-size: 13px;
@@ -2239,6 +2242,6 @@ h2 {
     padding: 0 27px 0 0;
 }
 .lead-creative~p {
-    font-size: 16px;
+    font-size: 12px;
 }
   }
