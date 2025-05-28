@@ -9,7 +9,7 @@ window.addEventListener("load", event => {
 
             value: 125,
             images: [{
-                    img: 'images/Sveta2.png'
+                    img: 'images/save.jpg'
                 },
                 {
                     img: 'images/slider01.jpg'
