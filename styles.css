@@ -469,11 +469,6 @@ video {
   background: url("/images/backphoto.png") no-repeat center;
   position: relative;
 }
-@media screen and (max-width: 799px) {
-  .wrapper .content .left {
-    padding: 60px 0px;
-  }
-}
 .wrapper .content .left .sliderNavigation {
   width: -moz-fit-content;
   width: fit-content;
@@ -489,7 +484,7 @@ video {
 }
 @media screen and (max-width: 799px) {
   .wrapper .content .left .sliderNavigation {
-    bottom: 20px;
+    bottom: 34px;
   }
 }
 .wrapper .content .left .sliderNavigation .swiper-pagination {
@@ -500,7 +495,7 @@ video {
 .wrapper .content .left .sliderNavigation .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  border: 1px solid white;
+  border: 1px solid #747272;
   background-color: transparent;
   margin: 0 10px;
   border-radius: 10px;
@@ -905,7 +900,7 @@ video {
 }
 @media screen and (max-width: 512px) {
   .galleryMain .swiper-slide {
-    height: 450px;
+    height: 463px;
   }
 }
 .galleryMain .swiper-slide .scene {
@@ -931,7 +926,7 @@ video {
 }
 @media screen and (max-width: 512px) {
   .galleryMain .swiper-slide .scene {
-    height: 450px;
+    height: 343px;
   }
 }
 .galleryMain .swiper-slide img {
