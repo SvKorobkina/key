@@ -534,6 +534,7 @@ button.office-place{
 
 #office-place{
 border-radius: 18px;
+max-width: 900px;
 }
 
 .office-place {
@@ -1168,7 +1169,7 @@ section:last-child {
     margin-bottom: 98px;
 }
 .lead-creative~p{
-font-size: 40px;
+font-size: 32px;
 }
 
 .lead-creative-banner {
@@ -1452,7 +1453,6 @@ footer a {
 }
 .intro .container {
     margin-top: 288px;
-    max-width: 950px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1902,7 +1902,7 @@ h2 {
     display: none; /* Скрыто по умолчанию */
     background-color: rgb(0,0,0); /* Затемнение фона */
     background-color: rgba(0,0,0,0.5); /* Полупрозрачное затемнение */
-    z-index: 1; /* Фон на нижнем слое */
+    z-index: 100; /* Фон на нижнем слое */
     overflow: auto; /* При необходимости, то появиться прокрутка */
   }
 
