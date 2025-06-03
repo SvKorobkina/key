@@ -7,6 +7,8 @@ window.addEventListener("load", event => {
                 { type: 'image', src: 'images/slider01.jpg' },
                 { type: 'image', src: 'images/slider02.jpg' },
                 { type: 'image', src: 'images/slider03.jpg' },
+                { type: 'image', src: 'images/slider04.jpg' },
+                { type: 'image', src: 'images/slider05.jpg' },
                 { type: 'video', src: 'video/IMG_5520.MOV' },
                  { type: 'video', src: 'video/IMG_5518.MOV' },
             ]
