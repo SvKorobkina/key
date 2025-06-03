@@ -2,7 +2,7 @@ h2 {
     cursor: pointer;
 }
 
-.modal {
+.modal, .modal2 {
     display: none; /* Скрыть по умолчанию */
     position: fixed; /* Открывается поверх всего */
     z-index: 1000; /* Поверх других элементов */
@@ -23,7 +23,14 @@ h2 {
     max-width: 800px; /* Максимальная ширина */
 }
 
-.close {
+.modal-content2 {
+    position: relative;
+    margin-left: 1.5%;
+    width: 100%;
+    max-width: 800px;
+}
+
+.close, .close2 {
     position: absolute;
     top: -3px;
     right: 9%;
@@ -39,6 +46,7 @@ button {
     padding: 15px;
     font-size: 20px;
     color: #000000;
+    margin-top: 10px;
     /* background: rgba(44, 111, 119, 1); */
     border: 1px solid black;
     border-radius: 10px;
@@ -46,7 +54,6 @@ button {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-    margin: auto;
     cursor: pointer;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
     -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
@@ -55,8 +62,15 @@ button {
 button:hover {
 background-color: #c4ac6c;
 }
+.breadcrumb {
+    background-color: inherit;
+    height: 40px;
+}
+a {
+    color: #8f7e50 !important;
+}
 @media (max-width: 851px){
-    .close {
+    .close, .close2 {
         right: 9%;
     }
     video{
@@ -64,11 +78,11 @@ background-color: #c4ac6c;
     }
     .modal-content {
         top: 78px;
-        left: 30rem;
+        left: 28rem;
         transform: 0;
         width: 80%;
     }
-    .close {
+    .close, .close2 {
         position: absolute;
         top: -3px;
         right: 55%;
@@ -77,18 +91,22 @@ background-color: #c4ac6c;
         cursor: pointer;
         z-index: 100;
     }
+    button{
+        margin: 10px auto;
+    }
+    .back{
+        display: none;
+    }
 }
 @media (max-width: 500px) {
     .modal-content {
-
-        left: 25%;
 
     }
 }
 @media (max-width: 390px) {
     .modal-content {
 
-        left: 26%;
+        left: 28%;
 
     }
 }

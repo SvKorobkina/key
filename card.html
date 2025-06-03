@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!--подключение скриптового файла библиотеки jquery, необходимого для работы фреймворка-->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <!--подключение скриптового файла библиотеки popper, необходимого для работы фреймворка-->
+     <script src="https://cdn.jsdelivr.net/npm/ popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <!-- подключение скриптового файла фреймворка bootstrap -->
+    <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
@@ -28,23 +36,21 @@
  <!-- end about -->
 
  <div class="wrapper">  
-         <nav>
-             <!--<div class="mainLogo">Logo</div>-->
+         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+
              <div class="menu">
-                <!--
-                 <div class="menuLinks">
-                     <a href="" class="menuLink">About</a>
-                     <a href="" class="menuLink">Store</a>
-                     <a href="" class="menuLink">Contacts</a>
-                 </div>
- -->
                  <div class="shoppingCart">
 
                      <div class="shoppingIcon">
-                      <a href="index.html"><img src="images/logo.png" alt="" width="100"></a>
+                      <a href="index.html"><img src="images/logo.png" alt="" width="80"></a>
                          <span class="itemNumber">0</span>
+
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Преображение</li>
+                    </ol>
                      </div>
-                    <a href="index.html">Назад</a>
+                    
                      <div class="shoppingMenu">
                          <p class="shoppingTitle">Your Shopping Cart</p>
                          <div class="productResume">
@@ -62,13 +68,14 @@
  
                      </div>
                  </div>
- 
+            <a class="back" href="index.html">Назад</a>
 
-             </div>
+             </div>  
+
          </nav>
- 
+
          <div class="content">
- 
+
              <section class="left">
                <!-- <video controls width="306">
                      <source src="/images/IMG_5518.MOV" type="video/webm"> 
@@ -99,13 +106,23 @@
                          <p class="modelTitle">Светлана</p>
                          <p class="modelDesc">38 лет</p>
                      </div>
-                     <button  id="open-video">Смотреть преображение</button>
 
-                     <div id="video-modal" class="modal">
+
+                     <div id="video-modal1" class="modal">
                          <div class="modal-content">
                              <span class="close">&times;</span>
                              <video controls id="video" width="560" frameborder="0" allowfullscreen>
                                 <source src="images/IMG_5518.MOV" type="video/webm">
+                                Ваш браузер не поддерживает встроенные видео :(
+                              </video>
+
+                         </div>
+                     </div>
+                     <div id="video-modal2" class="modal">
+                         <div class="modal-content2">
+                             <span class="close2">&times;</span>
+                             <video controls id="video" width="560" frameborder="0" allowfullscreen>
+                                <source src="images/IMG_5520.MOV" type="video/webm">
                                 Ваш браузер не поддерживает встроенные видео :(
                               </video>
 
@@ -161,7 +178,8 @@
                      </div>
  
                  </div>
-                 
+                    <button  id="open-video1" >Посмотреть видео 1</button>
+                    <button  id="open-video2" >Посмотреть видео 2</button>
              </section>
              <!-- Swiper -->
  
