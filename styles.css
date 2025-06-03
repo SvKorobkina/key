@@ -7,6 +7,7 @@
   text-decoration: none;
   color: inherit;
   box-sizing: border-box;
+  text-align: justify;
 }
 *:focus {
   outline: 0;
@@ -457,7 +458,7 @@ video {
 }
 .wrapper .content .left,
 .wrapper .content .right {
-  width: 96%;
+  width: 115%;
   height: 100%;
 }
 @media screen and (max-width: 799px) {
@@ -475,7 +476,7 @@ video {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
-  left: 45%;
+  left: 37%;
   transform: translateX(-50%);
   height: 40px;
   display: flex;
@@ -483,6 +484,7 @@ video {
   align-items: center;
   position: absolute;
   bottom: 90px;
+  text-shadow: 3px -1px 10px white;
 }
 @media screen and (max-width: 799px) {
   .wrapper .content .left .sliderNavigation {
@@ -533,8 +535,9 @@ video {
   transform: translateX(-5px);
 }
 .wrapper .content .right {
+  width: 100%;
   background-color: white;
-  padding: 0px 60px 40px 15%;
+  padding: 0 60px;
 }
 @media screen and (max-width: 799px) {
   .wrapper .content .right {
@@ -554,7 +557,6 @@ video {
 @media screen and (max-width: 799px) {
   .wrapper .content .right .rightContent {
     max-width: 400px;
-    margin: auto;
     margin-top: 60px;
   }
 }
@@ -866,11 +868,6 @@ video {
   z-index: 2;
   display: none;
 }
-@media screen and (max-width: 1919px) {
-  .galleryMain:before {
-    display: block;
-  }
-}
 @media screen and (max-width: 799px) {
   .galleryMain:before {
     display: none;
@@ -891,6 +888,7 @@ video {
 }
 .galleryMain .swiper-slide {
   width: 100%;
+  max-height: 1000px;
   transition: all 0.4s ease;
 }
 @media screen and (max-width: 799px) {

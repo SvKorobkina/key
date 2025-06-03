@@ -48,6 +48,7 @@ $neu-06: #F5F5F5;
     text-decoration: none;
     color: inherit;
     box-sizing: border-box;
+    text-align: justify;
 
     &:focus {
         outline: 0;
@@ -518,7 +519,7 @@ color:rgba(0, 0, 0, 0.5) !important;
 
         .left,
         .right {
-            width: 96%;
+            width: 115%;
             height: 100%;
 
             @include sm {
@@ -540,7 +541,7 @@ color:rgba(0, 0, 0, 0.5) !important;
             .sliderNavigation {
                 width: fit-content;
                 margin: 0 auto;
-                left: 45%;
+                left: 37%;
                 transform: translateX(-50%);
                 height: 40px;
                 display: flex;
@@ -548,6 +549,7 @@ color:rgba(0, 0, 0, 0.5) !important;
                 align-items: center;
                 position: absolute;
                 bottom: 90px;
+                text-shadow: 3px -1px 10px white;
 
                 @include sm {
                     bottom: 34px;
@@ -612,8 +614,9 @@ color:rgba(0, 0, 0, 0.5) !important;
 
         // Right Side - Product Info
         .right {
+            width: 100%;
             background-color: white;
-            padding: 0px 60px 40px 15%;
+            padding: 0 60px;    
 
             @include sm {
                 height: auto;
@@ -634,7 +637,6 @@ color:rgba(0, 0, 0, 0.5) !important;
 
                 @include sm {
                     max-width: 400px;
-                    margin: auto;
                     margin-top: 60px;
                 }
 
@@ -997,7 +999,7 @@ color:rgba(0, 0, 0, 0.5) !important;
         display: none;
 
         @include lg {
-            display: block;
+           
         }
 
         @include sm {
@@ -1019,6 +1021,7 @@ color:rgba(0, 0, 0, 0.5) !important;
 
     .swiper-slide {
         width: 100%;
+        max-height: 1000px;
 
         transition: all 0.4s ease;
 

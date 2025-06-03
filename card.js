@@ -1,33 +1,16 @@
 window.addEventListener("load", event => {
-
     function productHeading() {
-        ////////////////
-        // Variables
-        ////////////////
-
         const product = {
-
             value: 125,
-            images: [{
-                    img: 'images/save.jpg'
-                },
-                {
-                    img: 'images/slider01.jpg'
-                },
-                {
-                    img: 'images/slider02.jpg'
-                },
-                {
-                    img: 'images/slider03.jpg'
-                },
-                {
-                    img: 'images/slider04.jpg'
-                },
-                {
-                    img: 'images/slider05.jpg'
-                }
+            media: [
+                { type: 'image', src: 'images/save.jpg' },
+                { type: 'image', src: 'images/slider01.jpg' },
+                { type: 'image', src: 'images/slider02.jpg' },
+                { type: 'image', src: 'images/slider03.jpg' },
+                { type: 'video', src: 'video/IMG_5520.MOV' },
+                 { type: 'video', src: 'video/IMG_5518.MOV' },
             ]
-        }
+        };
 
         const btnAdd = document.querySelector('.btn.add'),
             btnContainer = document.querySelector('.btnContainer'),
@@ -45,7 +28,7 @@ window.addEventListener("load", event => {
             shoppingMenu = document.querySelector('.shoppingMenu'),
             emptyCart = document.querySelector('.emptyCart');
 
-        let = priceFinal = document.querySelector('.priceFinal'),
+        let priceFinal = document.querySelector('.priceFinal'),
             priceOriginal = document.querySelector('.priceOriginal'),
             discount = null,
             sizeNumber = document.querySelector('.sizeNumber'),
@@ -53,31 +36,17 @@ window.addEventListener("load", event => {
             maxQuantity = 5,
             newMaxQuantity = maxQuantity;
 
-        ////////////////
-        // Events
-        ////////////////
-
         btnAdd.addEventListener('click', addItem);
         plus.addEventListener("click", plusQuantity);
         minus.addEventListener("click", minusQuantity);
         arrowDrop.addEventListener("click", openDrop);
         shoppingIcon.addEventListener("click", openShoppingCart);
-
         emptyCart.addEventListener("click", cleanCart);
-
         dropItem.forEach(function (el) {
             el.addEventListener("click", getSize);
-        })
+        });
 
         window.addEventListener("resize", resize);
-
-
-        ////////////////
-        // Functions
-        //////////////// 
-
-        // Fixed Nav 
-
         window.onscroll = function () {
             if (window.pageYOffset >= 60) {
                 nav.classList.add("fixed");
@@ -86,10 +55,7 @@ window.addEventListener("load", event => {
             }
         };
 
-        // Change button position on mobile
-
         function resize() {
-            //Button
             if (window.innerHeight > wrapper.offsetHeight) {
                 btnContainer.classList.remove('fixedBtn');
             } else {
@@ -98,42 +64,32 @@ window.addEventListener("load", event => {
             parallax();
         }
 
-        // Parallax
-
         function parallax() {
             if (window.innerWidth > 800) {
                 var scene = document.querySelectorAll('.scene');
                 scene.forEach(pic => {
                     var parallax = new Parallax(pic);
-                })
+                });
             }
         }
 
-        // Calculate the Discount
-
-        function getDisccount() {
+        function getDiscount() {
             priceOriginal.innerText = product.value + "€";
             discount = product.value - (product.value * (30 / 100));
             priceFinal.innerText = discount + "€";
         }
 
-        // Calculate the the Prices with discounts
-
         function getPrice() {
-
-            priceFinal.innerText = discount * inputQuantity.value + "€";
-            priceOriginal.innerText = product.value * inputQuantity.value + "€";
-
+            priceFinal.innerText = (discount * inputQuantity.value).toFixed(2) + "€";
+            priceOriginal.innerText = (product.value * inputQuantity.value).toFixed(2) + "€";
             setTimeout(() => {
                 priceFinal.classList.remove('anime');
             }, 400);
         }
 
-        // Update the prices with the quantity counter
-
         function plusQuantity() {
             if (inputQuantity.value < maxQuantity) {
-                inputQuantity.value == inputQuantity.value++;
+                inputQuantity.value = parseInt(inputQuantity.value) + 1;
                 priceFinal.classList.add('anime');
             }
             getPrice();
@@ -141,34 +97,27 @@ window.addEventListener("load", event => {
 
         function minusQuantity() {
             if (inputQuantity.value > 1) {
-                inputQuantity.value == inputQuantity.value--;
+                inputQuantity.value = parseInt(inputQuantity.value) - 1;
                 priceFinal.classList.add('anime');
             }
             getPrice();
         }
 
-        // Add items to shopping cart
-
         function addItem() {
-
             let cenas = parseInt(itemNumber.innerText) + parseInt(inputQuantity.value);
-
             if (cenas <= newMaxQuantity) {
                 itemNumber.style.display = "";
-                itemNumber.innerText = "";
-                
-                itemNumber.classList.add("");
+                itemNumber.innerText = cenas; // Обновляем itemNumber
+                itemNumber.classList.add("addItem");
                 error.style.display = "none";
             } else {
                 error.style.display = "flex";
             }
-
             setTimeout(() => {
+                itemNumber.class
                 itemNumber.classList.remove("addItem");
             }, 700);
         }
-
-        // Open Drop
 
         function openDrop() {
             if (dropdown.classList.contains('open')) {
@@ -178,14 +127,10 @@ window.addEventListener("load", event => {
             }
         }
 
-        //get Drop Size Number Value 
-
         function getSize(e) {
             sizeNumber.innerText = e.currentTarget.innerText;
             openDrop();
         }
-
-        // Open Shopphing cart
 
         function openShoppingCart() {
             if (itemNumber.innerText != "0") {
@@ -197,8 +142,6 @@ window.addEventListener("load", event => {
             }
         }
 
-        //Clean Shopping Cart
-
         function cleanCart() {
             shoppingMenu.classList.remove('openShopping');
             itemNumber.style.display = "none";
@@ -206,29 +149,37 @@ window.addEventListener("load", event => {
             itemNumber.innerText = "0";
         }
 
-        // Populate the images for Swiper
+        product.media.forEach(function (el) {
+            let template = '';
+            let template2 = '';
 
-        product.images.forEach(function (el) {
+            if (el.type === 'image') {
+                template = `
+                    <div class="swiper-slide">
+                        <div class="scene" data-hover-only="false"> 
+                            <img src="${el.src}" data-depth="0.5">
+                            <img src="${el.src}" data-depth="1" class="shadow">
+                        </div>
+                    </div>`;
 
-            let template = `
-                <div class="swiper-slide">
-                    <div class="scene" data-hover-only="false"> 
-                        <img src="${el.img}" data-depth="0.5">
-                        <img src="${el.img}" data-depth="1" class="shadow">
-                    </div>
-                </div>`;
+                template2 = `
+                    <div class="swiper-slide">
+                        <img src="${el.src}">
+                    </div>`;
+            } else if (el.type === 'video') {
+                template = `
+                    <div class="swiper-slide">
+                        <video controls>
+                            <source src="${el.src}" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>`;
+            }
 
-            let template2 = `
-                <div class="swiper-slide">
-                    <img src="${el.img}">
-                </div>`;
-
+            // Вставляем шаблоны в соответствующие контейнеры
             document.querySelector('.galleryMain .swiper-wrapper').insertAdjacentHTML('beforeend', template);
             document.querySelector('.galleryThumbs .swiper-wrapper').insertAdjacentHTML('beforeend', template2);
         });
-
-
-        // Make the slider function
 
         var galleryThumbs = new Swiper('.galleryThumbs', {
             spaceBetween: 0,
@@ -237,7 +188,6 @@ window.addEventListener("load", event => {
             allowTouchMove: false,
             allowSlidePrev: false,
             allowSlideNext: false,
-
         });
 
         var galleryMain = new Swiper('.galleryMain', {
@@ -251,7 +201,6 @@ window.addEventListener("load", event => {
                 slideShadows: false,
                 depth: 200,
                 stretch: 50,
-
             },
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -260,15 +209,13 @@ window.addEventListener("load", event => {
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-
             },
             thumbs: {
                 swiper: galleryThumbs,
             },
         });
 
-        // Call functions 
-        getDisccount();
+        getDiscount();
         parallax();
         resize();
     }
