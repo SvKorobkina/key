@@ -34,7 +34,6 @@
 }
 .header2 .separator {
   height: 10px;
-  display: inline-block;
   border-left: 2px solid #999;
   margin: 0px 10px;
 }
@@ -107,4 +106,10 @@
 }
 .details .skills__item .right input:checked + label {
   background: #79A9CE;
+}
+
+@media (max-width: 767px) {
+  .separator {
+    display: none;
+  }
 }/*# sourceMappingURL=style_info.css.map */
