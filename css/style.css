@@ -1972,6 +1972,8 @@ display: flex;
 }
 .gold{
     color: #BFA55E;
+    text-align: left;
+    margin-left: 0;
 }
 .brendMoney{
     top: 0 !important;
