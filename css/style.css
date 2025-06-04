@@ -1952,6 +1952,9 @@ display: flex;
     scrollbar-width: thin;
     scrollbar-color: #cccdcc #f1f1f1;
 }
+.modal-body p{
+    margin-bottom: 0;
+}
 .modal-body__border{
     padding-bottom: 10px;
     border-bottom: 1px solid #bfa55e;
@@ -1974,6 +1977,7 @@ display: flex;
     color: #BFA55E;
     text-align: left;
     margin-left: 0;
+    margin-top: 15px;
 }
 .brendMoney{
     top: 0 !important;
@@ -2215,7 +2219,7 @@ display: flex;
 .modal-body {
     padding: 0;
     height: 69vh;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .card__button{
