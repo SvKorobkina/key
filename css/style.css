@@ -1952,6 +1952,10 @@ display: flex;
     scrollbar-width: thin;
     scrollbar-color: #cccdcc #f1f1f1;
 }
+.modal-body__border{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bfa55e;
+}
 .modal-footer {
     padding: 15px;
     text-align: right;
@@ -1965,6 +1969,9 @@ display: flex;
     top: 5% !important;
     z-index: 5000;
     overflow-y: scroll;
+}
+.gold{
+    color: #BFA55E;
 }
 .brendMoney{
     top: 0 !important;
@@ -2206,6 +2213,7 @@ display: flex;
 .modal-body {
     padding: 0;
     height: 69vh;
+    margin-top: 20px;
 }
 
 .card__button{
