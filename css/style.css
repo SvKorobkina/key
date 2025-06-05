@@ -271,8 +271,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 
 li{
+    display: flex;
     list-style-type: none;
-    /*text-transform: capitalize;*/
+    /* text-transform: capitalize; */
+    flex-direction: column;
+    align-items: center;
 }
 .top70{
     margin-top:70px 
@@ -533,9 +536,11 @@ button.office-place{
 }
 
 #office-place{
-border-radius: 18px;
-max-width: 900px;
+    border-radius: 18px;
+    width: 472px;
+    height: 62px;
     margin-top: 41px;
+    font-size: larger;  
 }
 
 .office-place {
@@ -2232,6 +2237,11 @@ display: flex;
 }
 .cards{
      flex-direction: column;
+}
+#office-place{
+    width: 327px;
+    height: 44px;
+    font-size: 16px;
 }
 }
 

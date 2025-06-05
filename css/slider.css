@@ -1,0 +1,64 @@
+.slider {
+  --value: 38%;
+  position: relative;
+  width: 334px;
+  height: 400px;
+  border: 1px solid #ffffff;
+}
+
+.slider__img {
+  position: absolute;
+  top: 0;
+  max-width: none;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider__img--before {
+  left: 0;
+  width: var(--value);
+  -o-object-position: left;
+     object-position: left;
+}
+
+.slider__img--after {
+  right: 0;
+  width: calc(100% - var(--value));
+  -o-object-position: right;
+     object-position: right;
+}
+
+.slider__range-visible {
+  position: absolute;
+  top: 0;
+  left: var(--value);
+  width: 4px;
+  height: 100%;
+  background-color: currentColor;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.slider__range-visible::before {
+  content: "";
+  position: absolute;
+  top: 89%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(235, 235, 235);
+  background: url(../../images/comparision.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__range-js {
+  position: absolute;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0;
+  inset: 0;
+}/*# sourceMappingURL=slider.css.map */
