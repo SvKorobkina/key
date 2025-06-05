@@ -1121,4 +1121,10 @@ video {
   top: -5px;
   right: -4px;
   width: 25px;
+}
+
+@media screen and (max-width: 512px) {
+  .card_footer {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

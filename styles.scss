@@ -1255,3 +1255,8 @@ color:rgba(0, 0, 0, 0.5) !important;
     right: -4px;
     width: 25px;
 }
+.card_footer{
+     @include xs {
+                    display: none;
+                }
+}
