@@ -75,7 +75,7 @@
   width: 60%;
 }
 .details .right {
-  tex-align: right;
+  text-align: right;
   width: 39%;
 }
 .details .name {
