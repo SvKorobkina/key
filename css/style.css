@@ -2185,6 +2185,15 @@ display: flex;
 .brend{
     top: 0 !important;
 }
+.card{
+    display: none;
+}
+.slider{
+    display: block;
+}
+.morph{
+    display: block;
+}
 @media (max-width: 767px) {
     #site-footer {
         text-align: center;
@@ -2235,6 +2244,9 @@ display: flex;
     justify-content: center;
     align-items: center;
 }
+.card{
+    display: block;
+}
 .cards{
      flex-direction: column;
 }
@@ -2242,6 +2254,12 @@ display: flex;
     width: 327px;
     height: 44px;
     font-size: 16px;
+}
+.slider{
+    display: none;
+}
+.morph{
+    display:none;
 }
 }
 
