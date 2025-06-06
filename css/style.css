@@ -1163,7 +1163,7 @@ section:last-child {
     color: black;
     font-weight: 480;
 }
-.lead-creative~h3{
+.lead-creative~h3, .anim1{
     font-style: italic;
     font-weight: 500;
     font-size: 52px;
@@ -1173,6 +1173,105 @@ section:last-child {
     text-align: center;
     margin-top: 98px;
     margin-bottom: 98px;
+    background-image: linear-gradient(
+    -225deg,
+    #000000 0%,
+    #37352f 29%,
+    #9e9e9d 67%,
+    #D5CCB3 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: -150% center;
+  }
+}
+
+.anim2{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 52px;
+    /* text-align: center; */
+    color: #000;
+    width: 92%;
+    text-align: center;
+    margin-top: 98px;
+    margin-bottom: 98px;
+    background-image: linear-gradient(
+    -225deg,
+    #000000 0%,
+    #37352f 29%,
+    #9e9e9d 67%,
+    #D5CCB3 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip2 5s ease-in-out infinite;
+  animation-delay: 2s;
+  display: inline-block;
+}
+
+@keyframes textclip2 {
+  to {
+    background-position: -150% center;
+  }
+}
+
+.anim3{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 52px;
+    /* text-align: center; */
+    color: #000;
+    width: 92%;
+    text-align: center;
+    margin-top: 98px;
+    margin-bottom: 98px;
+    background-image: linear-gradient(
+    -225deg,
+    #000000 0%,
+    #37352f 29%,
+    #9e9e9d 67%,
+    #D5CCB3 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip3 5s ease-in-out infinite;
+  animation-delay: 3.5s;
+  display: inline-block;
+}
+
+@keyframes textclip3 {
+  to {
+    background-position: -150% center;
+  }
+}
+
+.anim1, .anim2, .anim3{
+    display: none;
 }
 .lead-creative~p{
 font-size: 32px;
@@ -2217,6 +2316,9 @@ display: flex;
     .swiper-slide {
         height: 28em !important;
     }*/
+    .swiper-button-next, .swiper-button-prev {
+    top: var(--swiper-navigation-top-offset, 48%) !important;
+    }
     .card__overlay {
     background-color: transparent;
     transform: translateY(-69%);
@@ -2267,6 +2369,13 @@ display: flex;
 @media (max-width: 662px) {
     .lead-creative {
         font-size: 45px;
+        line-height: 1;
+        margin-top: 30px;
+        letter-spacing: 1px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .container h2 {
         font-style: italic;
@@ -2291,8 +2400,10 @@ display: flex;
 .lead-creative~h3 {
     font-size: 30px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
+    display: none;
 }
+
       .last-child {
         padding: 39px 10px 39px 0;
         font-size: 35px;
@@ -2334,6 +2445,12 @@ display: flex;
 }
 .lead-creative-banner{
     display: none;
+}
+.anim1, .anim2, .anim3{
+    display: block;
+    font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
 }
 }
 
