@@ -1260,3 +1260,15 @@ color:rgba(0, 0, 0, 0.5) !important;
                     display: none;
                 }
 }
+
+.header__text{
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 74px;
+     @include xs {
+                    display: none;
+                }
+}

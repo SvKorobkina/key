@@ -1127,4 +1127,18 @@ video {
   .card_footer {
     display: none;
   }
+}
+
+.header__text {
+  display: flex;
+  width: 400px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 74px;
+}
+@media screen and (max-width: 512px) {
+  .header__text {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
