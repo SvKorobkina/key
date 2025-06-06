@@ -2122,6 +2122,7 @@ display: flex;
   }    
 
   .card__button{
+    margin-top: 10px;
 	border-radius: 25px;
 	border: none;
 	background-color: #BFA55E;
