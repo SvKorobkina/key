@@ -275,7 +275,6 @@ li{
     list-style-type: none;
     /* text-transform: capitalize; */
     flex-direction: column;
-    align-items: center;
 }
 .top70{
     margin-top:70px 
@@ -2292,7 +2291,9 @@ display: flex;
     display: block;
 }
 .morph{
-    display: block;
+        display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @media (max-width: 767px) {
     #site-footer {
@@ -2333,6 +2334,7 @@ display: flex;
 .card__description {
     display: none;
 }
+
 .modal-body {
     padding: 0;
     height: 69vh;
