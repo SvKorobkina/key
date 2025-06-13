@@ -432,7 +432,7 @@
    
     </div><!-- our-info -->
 <div class="section">
-    <p class="text-center greyish">Хотите записаться прямо сейчас?  <a class="btn btn-large btn-border" href="#contact">Напишите нам</a>
+    <p class="text-center greyish">Хотите записаться прямо сейчас?  <a class="btn btn-large" href="#contact">Напишите нам</a>
 </div>
 
     <div class="section" id="our-service">
@@ -936,6 +936,7 @@
     <script src="js/wow.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/bot.js"></script>
       <script src="js/slider_img.js"></script>
   	<script>
   	    function init() {
@@ -1032,49 +1033,7 @@
     }
 });
 
-document.getElementById('contact-us').addEventListener('submit', function(e) {
-    e.preventDefault(); // Отменяем стандартное поведение формы
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const city = document.getElementById('course-select').value;
-    const message = document.getElementById('message').value;
-
-    const token = ''; // Замените на ваш токен
-    const chatId = '1842685916'; // Замените на ваш chat ID или @username
-
-    const text = `Новое сообщение:\nФИО: ${name}\nТелефон: ${email}\nПакет: ${city}\nСообщение: ${message}`;
-
-    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        chat_id: chatId,
-        text: text,
-        parse_mode: 'HTML'
-    })
-})
-
-.then(response => {
-    if (!response.ok) {
-        throw new Error('Network response was not ok');
-    }
-    return response.json();
-})
-.then(data => {
-    if (data.ok) {
-        alert('Сообщение отправлено!');
-    } else {
-        alert('Ошибка при отправке сообщения.');
-    }
-})
-.catch(error => {
-    console.error('Error:', error);
-    alert('Ошибка при отправке сообщения.');
-});
-});
 
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
