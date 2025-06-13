@@ -1300,9 +1300,14 @@ h2 {
 }
 
 .btn {
-    font-size: 1.1em;
-    padding: 1.204em 2.2em 1.3em;
-    letter-spacing: .08em;
+width: 206px;
+    height: 46px;
+    font-size: 21px;
+    padding: 10px 5px;
+    CONTAIN-INTRINSIC-BLOCK-SIZE: AUTO 100PX;
+    color: black;
+    background-color: #c6bd8b;
+    border-radius: 25px;
 }
 .team-container {
     max-width: 900px;
